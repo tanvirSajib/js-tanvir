@@ -11,7 +11,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-   
+    taskInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            const taskText = taskInput.value.trim();
+            if (taskText !== '') {
+                addTask(taskText);
+                taskInput.value = '';
+            }
+        }
+    });
 
     function addTask(taskText) {
         const li = document.createElement('li');
