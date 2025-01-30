@@ -9,3 +9,12 @@ function clearDisplay(){
     display.value = '';
 }
 
+function calculateResult(){
+    const display = document.getElementById('display');
+   try{
+    display.value= eval( display.value );
+   }catch(err){
+    console.log( err )
+   }
+}
+
