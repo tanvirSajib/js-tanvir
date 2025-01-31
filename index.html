@@ -11,7 +11,26 @@
     
 
    <!-- Budget Tracker  -->
-   
+
+   <h1>Budget Tracker</h1>
+  
+  <div class="transaction-form">
+    <input type="number" id="amount" placeholder="Amount">
+    <input type="text" id="description" placeholder="Description">
+    <select id="type">
+      <option value="income">Income</option>
+      <option value="expense">Expense</option>
+    </select>
+    <button onclick="addTransaction()">Add Transaction</button>
+  </div>
+
+  <div id="balance">Balance: $0.00</div>
+
+  <div class="transaction-list" id="transaction-list"></div>
+
+  <div id="chartContainer">
+    <canvas id="myChart"></canvas>
+  </div>
    
    
  
